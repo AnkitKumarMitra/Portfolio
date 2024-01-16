@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.vertical-line-popup {
+    border-left: 1px solid var(--secondary-color);
+}
+
+.navbar.active,
+.landing.active {
+    transition: 0.5s;
+    filter: blur(20px);
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 15px 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.logo img {
+    height: 64px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    opacity: 0.5;
+}
+
+.navbar-items {
+    width: 200px;
+}
+
+.navbar-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    list-style: none;
+}
+
+.item a {
+    color: #edf2fc;
+    font-size: 2rem;
+    opacity: 0.4;
+    text-decoration: none;
+}
+
+.item a:hover {
+    opacity: 0.3;
+}
+
+.landing {
+    height: 100vh;
+    background-image: url("../images/landing-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #363636;
+    padding: 150px 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.information-container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.information-container {
+    line-height: 45px;
+    color: white;
+}
+
+.information-container h1 {
+    font-size: 3.5rem;
+}
+
+.info-btn {
+    width: 150px;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.information-container button:hover {
+    opacity: 0.6;
+}
+
+.landing-img {
+    margin-top: auto;
+    height: 700px;
+}
+
+#popup {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 6fr 1fr 2fr;
+}
+
+#popup.active {
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.popup-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects-container {
+    padding: 50px 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    color: var(--secondary-color);
+}
+
+.projects-container>h1 {
+    font-size: 3.5rem;
+}
+
+.project-card {
+    display: flex;
+    gap: 20px;
+}
+
+.project-img {
+    width: 20vw;
+    transition: transform .6s;
+}
+
+.project-img:hover {
+    transform: scale(1.1);
+}
+
+.project-2 {
+    flex-direction: row-reverse;
+}
+
+.stacks {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stacks p {
+    padding: 7px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 25px;
+    min-width: fit-content;
+}
+
+.contact {
+    padding: 50px 20%;
+    color: var(--secondary-color);
+}
+
+.contact h1 {
+    font-size: 3.5rem;
+}
+
+.contact-body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
+}
+
+.contact-body img {
+    width: 600px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.input-field {
+    background-color: transparent;
+    border: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.message-area {
+    height: 250px;    
+}
+
+.submit-btn {
+    background-color: #94b8fc;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.msg {
+    color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+footer img {
+    width: 50px;
+}
+
+.contact-icon {
+    color: var(--secondary-color);
+    opacity: 0.6;
+    font-size: 2.5rem;
+    margin: 10px;
+}
+
+@media (max-width: 1432px) {
+    .project-info, .stacks {
+        width: 600px;
+    }
+    .stacks {
+        height: fit-content;
+    }
+    .project-info h3 {
+        font-size: 1rem;
+    }
+    .project-card p {
+        font-size: 0.8rem;
+    }
+
+    .stacks p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 935px) {
+    .information-container h1 {
+        font-size: 2rem;
+    }
+
+    .landing-img {
+        margin: auto;
+        height: 400px;
+    }
+    .contact-body img {
+        width: 450px;
+    }
+    .contact-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-field {
+        width: 450px;
+    }
+}
+
+@media (max-width: 650px) {
+    .project-img {
+        width: 200px;
+    }
+    .project-info, .stacks {
+        width: 450px;
+    }
+    .project-info h3 {
+        font-size: 0.9rem;
+    }
+    .project-card p {
+        font-size: 0.7rem;
+    }
+
+    .stacks p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .navbar {
+        padding: 15px 40px;
+    }
+
+    .navbar-items {
+        width: 45%;
+    }
+
+    .landing {
+        flex-direction: column;
+        padding: 200px 40px 40px 40px;
+        text-align: center;
+    }
+
+    .information-container {
+        margin: 20px;
+    }
+
+    .landing-img {
+        margin-top: 0;
+        height: 250px;
+    }
+    .project-info, .stacks {
+        width: 400px;
+    }
+    .contact-body img {
+        width: 390px;
+    }
+    .contact-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-field {
+        width: 390px;
+    }
+}
