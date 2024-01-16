@@ -286,13 +286,27 @@ footer img {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 90%;
+        width: 80%;
         padding: 30px;
     }
 
     .popup-left {
         order: 2;
         text-align: center;
+    }
+
+    .popup-left h2 {
+        font-size: 1rem;
+    }
+
+    .popup-left p {
+        font-size: 0.8rem;
+    }
+
+    .popup-left button {
+        width: 100px;
+        height: 40px;
+        padding: 5px;
     }
 
     .vertical-line-popup {
@@ -357,12 +371,12 @@ footer img {
     }
 
     .navbar-items {
-        width: 45%;
+        width: 55%;
     }
 
     .landing {
         flex-direction: column;
-        padding: 200px 40px 40px 40px;
+        padding: 200px 10px;
         text-align: center;
     }
 
@@ -375,10 +389,10 @@ footer img {
         height: 250px;
     }
     .project-info, .stacks {
-        width: 400px;
+        width: 350px;
     }
     .contact-body img {
-        width: 390px;
+        width: 350px;
     }
     .contact-body {
         display: flex;
@@ -386,6 +400,6 @@ footer img {
         align-items: center;
     }
     .input-field {
-        width: 390px;
+        width: 350px;
     }
 }
