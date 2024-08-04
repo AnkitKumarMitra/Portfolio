@@ -242,6 +242,10 @@ body {
     align-self: flex-end;
 }
 
+.submit-btn:hover {
+    background-color: #0d4dc4;
+}
+
 .msg {
     color: var(--secondary-color);
 }
