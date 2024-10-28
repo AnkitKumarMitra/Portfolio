@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useTheme } from "../hooks/useTheme";
-import AboutMe from './AboutMe';
+import AboutMe from "./AboutMe";
+import DownloadResume from "./DownloadResume";
 
 export default function Details() {
   const [isDark] = useTheme();
@@ -15,7 +16,12 @@ export default function Details() {
       <div className={`information-container ${isDark ? "dark" : ""}`}>
         <h1>Ankit Kumar Mitra</h1>
         <p>Full Stack Web Developer</p>
-        <button className="info-btn" onClick={togglePopup}>About Me</button>
+        <div className="buttonContainer">
+          <button className="info-btn" onClick={togglePopup}>
+            About Me
+          </button>
+          <DownloadResume />
+        </div>
       </div>
       <img src="/lander_img2.png" className="landing-img" alt="Landing" />
 
