@@ -3,12 +3,12 @@ import { useTheme } from "../hooks/useTheme";
 const projectDetails = [
   {
     id: 1,
-    title: "SimpAnime",
+    title: "Anime Streaming Platform",
     description:
       "A simple Anime Streaming Platform that offers free streaming of anime content, including TV shows, movies, and OVAs, in various genres such as action, romance, comedy, and more.",
     image: "/SimpAnime.png",
     link: "https://github.com/AnkitKumarMitra/SimpAnime",
-    stacks: ["MongoDB", "Express", "REACT", "Node.js", "Rrestful API"],
+    stacks: ["MongoDB", "Express", "REACT", "Node.js", "Restful API"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projectDetails = [
       "A simple website made using REACT and a restful API to search country flags and get their details.",
     image: "/CD-img.png",
     link: "https://github.com/AnkitKumarMitra/Countris-Details",
-    stacks: ["REACT", "Rrestful API"],
+    stacks: ["REACT", "Restful API"],
   },
   {
     id: 3,
